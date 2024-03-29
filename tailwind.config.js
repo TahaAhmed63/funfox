@@ -14,6 +14,9 @@ export default {
         'light-pink': '#FFAEBE',
 
       },
+      backgroundImage: {
+        'weekOne': "url('/assests/week-1/bg.jpg')",
+      }
     },
   },
   plugins: [

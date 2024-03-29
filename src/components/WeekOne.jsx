@@ -10,8 +10,8 @@ import bgOne from "/assests/week-1/bg-1.png";
 
 const WeekOne = () => {
   return (
-     <div className="bg-[#F7F9FE] border border-solid p-3">
-       <div className="flex flex-col items-center text-xl md:text-2xl">
+     <div className="container mx-auto px-4 md:px-0"> 
+       <div className="flex flex-col items-center text-xl md:text-2xl p-6 md:p-24">
          <h1 className="p-2 w-full max-w-[500px] text-center text-xl md:text-3xl rounded-full shadow-md border-dashed border-[3.31px] border-[#FFAEBE] bg-[#FE6784] text-white">Elements of Story Writing</h1>
          <p className="mt-3">
            Welcome to term 2 of Writers Club. Are you excited for this amazing
@@ -51,16 +51,16 @@ const WeekOne = () => {
            the same key elements:
          </p>
          <div className="relative">
-           <img src={bgOne} alt="Background" className="w-full min-h-64 md:min-h-56" />
-           <div className="absolute inset-6 flex flex-col items-start">
-             <p className="px-10">
-               For today’s lesson, we will try to understand and practice writing the setting for our stories.
-             </p>
-             <p className="px-10 pt-6 pb-5 md:pb-0">
-               The setting is an important element of every fiction story.
-             </p>
-           </div>
-         </div>
+ <img src={bgOne} alt="Background" className="w-full min-h-64 md:min-h-56" />
+ <div className="absolute inset-6 flex flex-col items-start">
+    <p className="px-10">
+      For today’s lesson, we will try to understand and practice writing the setting for our stories.
+    </p>
+    <p className="px-10 pt-6 pb-5 md:pb-0">
+      The setting is an important element of every fiction story.
+    </p>
+ </div>
+</div>
        </div>
      </div>
   );
