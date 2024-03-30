@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 const FunFox = () => {
   const swiperRef = useRef(null);
   const [slidesLength, setSlidesLength] = React.useState(1);
+  const [currentIndex, setCurrentindex] = React.useState(1);
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -15,15 +16,23 @@ const FunFox = () => {
 
   const handlePrevSlide = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
+      const newIndex = currentIndex > 1 ? currentIndex - 1 : 1;
+      console.log("New index on prev:", newIndex);
+      setCurrentindex(newIndex);
       swiperRef.current.swiper.slidePrev();
     }
   };
 
   const handleNextSlide = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
+      const newIndex = currentIndex < slidesLength ? currentIndex + 1 : slidesLength;
+      console.log("New index on next:", newIndex);
+      setCurrentindex(newIndex);
       swiperRef.current.swiper.slideNext();
     }
   };
+
+ 
   return (
     <>
     <Swiper
@@ -61,7 +70,7 @@ ref={swiperRef}
         </svg>
       </button>
       <div className="text-center">
-          <span className="font-bold">{swiperRef.current?.swiper?.activeIndex ? swiperRef.current.swiper.activeIndex + 1 : 1}</span> / {/* Get current slide index */}
+          <span className="font-bold">{currentIndex}</span> / {/* Get current slide index */}
           <span>{slidesLength}</span> {/* Get total slides */}
         </div>
 
